@@ -145,6 +145,8 @@ ls
 ```
 vim 
 ```
+
+
 #### Create instance
 ```
 resource "aws_instance" "first_terraform_instance" {
@@ -157,3 +159,11 @@ resource "aws_instance" "first_terraform_instance" {
     Name = "instance_tag"
   }
 }
+
+#### Create ip address
+```
+resource "aws_eip" "cloud_ip" {
+  instance = aws_instance.first_terraform_instance.id
+  vpc      = true
+}
+```
