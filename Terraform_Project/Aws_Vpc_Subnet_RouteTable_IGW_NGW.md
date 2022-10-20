@@ -150,7 +150,7 @@ vim
 #### Create instance
 ```
 resource "aws_instance" "first_terraform_instance" {
-  ami           = "ami-04897acca32efd05c"
+  ami           = "ami-089a545a9ed9893b6"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public_subnet.id  #Connect instance to public subnet
   vpc_security_group_ids = [aws_security_group.Security_Group_Name.id]
@@ -159,7 +159,7 @@ resource "aws_instance" "first_terraform_instance" {
     Name = "instance_tag"
   }
 }
-
+```
 #### Create ip address
 ```
 resource "aws_eip" "cloud_ip" {
