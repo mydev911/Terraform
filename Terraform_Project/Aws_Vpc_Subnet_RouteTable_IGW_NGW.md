@@ -147,7 +147,7 @@ vim
 ```
 
 
-#### Create instance
+#### Create instance on public subnet
 ```
 resource "aws_instance" "first_terraform_instance" {
   ami           = "ami-089a545a9ed9893b6"
@@ -161,9 +161,41 @@ resource "aws_instance" "first_terraform_instance" {
 }
 ```
 #### Create ip address
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip
 ```
 resource "aws_eip" "cloud_ip" {
   instance = aws_instance.first_terraform_instance.id
   vpc      = true
 }
 ```
+#### Create instance on private subnet
+```
+resource "aws_instance" "first_terraform_private_instance" {
+  ami           = "ami-089a545a9ed9893b6"
+  instance_type = "t2.micro"
+  subnet_id     = aws_subnet.private_subnet.id  #Connect instance to public subnet
+  vpc_security_group_ids = [aws_security_group.Security_Group_Name.id]
+  key_name      = "swapon-key-pair"
+  tags = {
+    Name = "private_instance_tag"
+  }
+}
+```
+#### Create public ip address for private subnet
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip
+```
+resource "aws_eip" "private_cloud_ip" {
+  vpc      = true
+}
+```
+#### Create netgetway for private subnet to expose
+```
+resource "aws_nat_gateway" "private_subnet_instance_NGW" {
+  allocation_id = aws_eip.private_cloud_ip.id
+  subnet_id     = aws_subnet.public_subnet.id
+
+  tags = {
+    Name = "gw NAT"
+  }
+```
+
