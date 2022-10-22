@@ -1,0 +1,4 @@
+variable "instancetype" {
+}
+variable "image" {
+}
