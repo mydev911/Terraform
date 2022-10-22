@@ -131,8 +131,7 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_
 ```
 resource "aws_key_pair" "swapon-key-pair" {
   key_name   = "deployer-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDrZeGIOgUHBwAW3sHVKefttlJZkH5yx5X9U7iuZBQVd9OBqv2hwUGVaAR5hbp9sTYHkyN0EJudpqG7wnDnSW+djIx+H3w4Q5JWfPIzALEow0tcYMsNz01sJ2eI/eByavubOnu9nTUGJHh2XNC89g0/UAOqHx1zUR1EJMhgNFOHdtSYSgu+D9mI3V04oK6MT2mQQdhDoqJjZFtq9x0uAQ1HsoOEvvAonPqIJx44Zs7AybH1NjtIuSjrdlyH68/rk7T8AYU063mPEr1/79s05KPBPqyyFj0qivIVyiHLBvsk8WBMFZhc1K6ACLxODVrjRGngUqT20jefH2wwFaRJI1ID root@ip-172-31-21-247.us-east-2.compute.internal
-"
+  public_key = "public-key"
 }
 ```
 #### Find key pair
