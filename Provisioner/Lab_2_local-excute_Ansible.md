@@ -28,7 +28,7 @@ provider "aws" {
 }
 resource "aws_key_pair" "devloper" {
   key_name    = "devloper"
-  public_key  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcyScoGy8VgdJSBwG2z4b/r66inIIZdMferXR4ZE+q2skugKkwILbKDJ1lJMx9kGMYlN7b+520CqtL1s9K5faO7OFXdqUuCHonhZAXLdc4LzUgvUeY9GuN5G/AjbHAeDHnXHDNUg5EKiYSS0dCfKGSFIj/budzKqIfaNE9t0RwfuFS5Y3p3WxlWI3N4kVmojc/SIjK9cCBPGcBtIiBAWt+vNy5QsfgAd3sogm8AvcOX7K7Z1AEJMDyn0I83eGMnWYgPsoNmxeYUIogKnmom775KqGJH2pmJKXjgPM0zdMPbc0e7dJyHx+yqypRZhXvRqZ0Y0jZnUB8EQnpzOhD/InP root@ip-172-31-83-46.ec2.internal"
+  public_key  = "ssh-rsa AAAAB9kGMYlN7b+520CqtL1s9K5faO7OFXdqUuCHonhZAXLdc4LzUgvUeY9GuN5G/AjbHAeDHnXHDNUg5EKiYSS0dCfKGSFIj/budzKqIfaNE9t0RwfuFS5Y3p3WxlWI3N4kVmojc/SIjK9cCBPGcBtIiBAWt+vNy5QsfgAd3sogm8AvcOX7K7Z1AEJMDyn0I83eGMnWYgPsoNmxeYUIogKnmom775KqGJH2pmJKXjgPM0zdMPbc0e7dJyHx+yqypRZhXvRqZ0Y0jZnUB8EQnpzOhD/InP root@ip-172-31-83-46.ec2.internal"
 }
 
 
