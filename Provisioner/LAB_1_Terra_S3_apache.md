@@ -1,8 +1,11 @@
 ## Create Apache Web Server in AWS Using Terraform
 - create ssh-keygen https://www.redhat.com/sysadmin/configure-ssh-keygen#:~:text=By%20default%2C%20your%20private%20and,pub%20files%2C%20respectively.
+- root > create folder > 
+- create file (aws.tf) and Create index.html (write someting) and create ssh-keygen
 - Create ssk-keygen Name- devloper
-- Source folder = .. vim index.html  (source) pwd
-- Destination folder = tmp folder (any other file is not support)
+- Source folder = /aws/index.html  (source) pwd
+- Destination folder =  /tmp/index.html --- tmp folder (any other file is not support)
+- Create connection between working ec2 instance and provisoned ec2 instancce
 
 ```
 provider "aws" {
