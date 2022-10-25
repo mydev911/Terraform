@@ -19,8 +19,8 @@ vim vpc.tf
 ```
 provider "aws" {
   region     = "us-east-2"
-  access_key = "AKIAXEXHKSQVXG7BOVF5"
-  secret_key = "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"
+  access_key = ""
+  secret_key = ""
 }
 ```
 #### Create Vpc
